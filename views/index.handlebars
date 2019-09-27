@@ -2,19 +2,23 @@
     <h1>TASK SAVER</h1>
     <h5>Save the tasks you need to get done later</h5>
 </section>
-<section class="text-center" style="width: 80%; margin-left: 100px; margin-right: 100px">
+<section class="text-center" style="width: 100%; margin: 0 auto; padding-right: 100px; padding-left: 100px">
     <ul class="list-group">
         {{#each tasks}}
             <li class="list-group-item">
-                {{!-- <p>Id: {{this.id}}</p> --}}
-                <p>Task: {{this.task}}</p>
+                <div class="input-group mb-3 align-items-center">
+                    <div style="background-color: transparent; border: none" class="input-group-text">
+                        <input  type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                    <p style="margin-bottom: 0">Task: {{this.task}}</p>
+                </div>
             </li>
         {{/each}}
     </ul>
 </section>
 
 <!-- Post request to the root route-->
-<form style="text-canter" action="/" method="POST">
-    <textarea style="width: 80%; margin-left: 100px; margin-right: 100px; margin-top: 10px" class="text-center" type="text" name="task"></textarea>
-    <button style="width: 80%; margin-left: 100px; margin-right: 100px" class="btn-block" type="submit">Submit</button>    
+<form style=" margin: 0 auto; padding-right: 100px; padding-left: 100px"  action="/" method="POST">
+    <textarea style="width: 100%; margin-top: 10px" class="text-center" type="text" name="task"></textarea>
+    <button class="btn-block" type="submit">Submit</button>    
 </form>
