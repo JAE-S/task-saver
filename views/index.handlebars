@@ -1,0 +1,20 @@
+<section style="background-color: black; color: silver" class="jumbotron text-center">
+    <h1>TASK SAVER</h1>
+    <h5>Save the tasks you need to get done later</h5>
+</section>
+<section class="text-center" style="width: 80%; margin-left: 100px; margin-right: 100px">
+    <ul class="list-group">
+        {{#each tasks}}
+            <li class="list-group-item">
+                {{!-- <p>Id: {{this.id}}</p> --}}
+                <p>Task: {{this.task}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</section>
+
+<!-- Post request to the root route-->
+<form style="text-canter" action="/" method="POST">
+    <textarea style="width: 80%; margin-left: 100px; margin-right: 100px; margin-top: 10px" class="text-center" type="text" name="task"></textarea>
+    <button style="width: 80%; margin-left: 100px; margin-right: 100px" class="btn-block" type="submit">Submit</button>    
+</form>
